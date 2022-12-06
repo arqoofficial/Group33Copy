@@ -1,13 +1,14 @@
 import io
 import streamlit as st
-
-st.title("Анализ тональности текста")
-st.markdown("Практическая работа группы **33**")
-
 from transformers import pipeline
 
 classifier = pipeline("sentiment-analysis",   
                       "blanchefort/rubert-base-cased-sentiment")
+
+st.title("Анализ тональности текста")
+st.markdown("Практическая работа группы **33**")
+
+
 
 text_input = st.text_area("Введите текст для оценки токсичности:", value="")
 
